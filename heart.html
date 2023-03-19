@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heart beat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+        .container {
+            background-color: red;
+            height: 150px;
+            width: 150px;
+            transform: rotate(45deg);
+            position: relative;
+            top: 150px;
+            box-shadow: 2px 2px 100px red;
+            left: 80px;
+            border-top-left-radius: 50%;
+            animation-name: cont;
+            animation: cont 0.5s linear 2s infinite ;
+        }
+        
+        .left {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            position: relative;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            transform: rotate(-45deg);
+            bottom: 70px;
+            left: 10px;
+            /* animation: cont 2s linear 2s infinite; */
+            animation: left 0.5s linear 2s infinite ;
+            box-shadow: 2px 2px 100px red;
+        }
+        
+        .right {
+            height: 150px;
+            width: 150px;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            background-color: red;
+            position: relative;
+            transform: rotate(45deg);
+            left: 150px;
+            bottom: 220px;
+            /* animation: cont 2s linear 2s infinite; */
+            animation: right 0.5s linear 2s infinite ;
+            box-shadow: 2px 2px 100px red;
+        }
+
+        @keyframes cont {
+            from {
+                height: 150px;
+                width: 150px;
+            }
+
+            to {
+                height: 180px;
+                width: 180px;
+                
+            }
+        }
+        @keyframes left {
+            from {
+                height: 150px;
+                width: 150px;
+            }
+
+            to {
+                height: 180px;
+                width: 180px;
+                bottom: 100px;
+                
+            }
+        }
+        @keyframes right {
+            from {
+                height: 150px;
+                width: 150px;
+            }
+
+            to {
+                height: 180px;
+                width: 180px;
+                bottom: 280px;
+                
+            }
+        }
+
+        @media screen and (max-width:489px) {
+            body {
+                background-color: pink;
+            }
+        }
+
+
+        .main {
+            position: absolute;
+            height: 390px;
+            width: 336px;
+            background-color: black;
+            /* animation: heartbeat 2s linear 2s infinite; */
+            top: 9%;
+            left: 35%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>
